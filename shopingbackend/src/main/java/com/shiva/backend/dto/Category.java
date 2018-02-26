@@ -11,13 +11,13 @@ public class Category {
 	
 	@Id
 	//@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID")
+	//@Column(name = "ID")
 	private int id;
-	@Column (name ="Name")
+	//@Column (name ="Name")
 	private String name;
-	@Column (name ="Description")
+	//@Column (name ="Description")
 	private String description;
-	@Column (name = "Image_Url")
+	@Column (name = "image_url")
 	private String imgURL;
 	@Column (name = "is_active")
 	private boolean active = true;

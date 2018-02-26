@@ -24,18 +24,18 @@ public class CategoryTestCase {
 		categoryDao = (CategoryDAO) context.getBean("categoryDao");
 	}
 	
-/*	@Test
+	@Test
 	public void testAddCategory() {
 		category = new Category();
 		category.setId(3);
-		category.setName("OLD CRT's");
-		category.setDescription("Contains list of OLD TV CRT");
-		category.setImgURL("LG.jpg");
-		category.setActive(false);
+		category.setName("Laptop");
+		category.setDescription("Contains list of Laptop");
+		category.setImgURL("HP.jpg");
+		category.setActive(true);
 		
 		assertEquals ("Success",true,categoryDao.add(category));
 
-	}*/
+	}
 	
 /*	@Test
 	public void testGetCategory() {
@@ -58,7 +58,7 @@ public class CategoryTestCase {
 	}*/
 	
 	
-	@Test
+/*	@Test
 	public void testDeleteCategory() {
 		
 		category = categoryDao.get(2);
@@ -67,6 +67,14 @@ public class CategoryTestCase {
 		assertEquals ("Success deleted single category",true,categoryDao.delete(category));
 		
 	}
+	*/
 	
+/*	@Test
+	public void testListCategory() {
+		
+		
+		assertEquals ("Success fetched list category",2,categoryDao.list().size());
+		
+	}*/
 	
 }

@@ -20,7 +20,7 @@ public class PageController {
 	@RequestMapping(value = {"/home"})
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("title", "Krishna");
+		mv.addObject("title", "Home");
 		
 		mv.addObject("categories",categoryDao.list());
 		mv.addObject("userClickHome", true);
@@ -51,7 +51,7 @@ public class PageController {
 	@RequestMapping(value = {"/show/all/products"})
 	public ModelAndView showAllProducts() {
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("title", "All Prodcuts");
+		mv.addObject("title", "All Products");
 		
 		mv.addObject("categories",categoryDao.list());
 		mv.addObject("userClickAllProducts", true);

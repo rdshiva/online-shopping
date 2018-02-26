@@ -8,10 +8,12 @@ $(function() {
 	case 'Contact':
 		$('#contact').addClass('active');
 		break;
-	case 'All Prodcuts':
+	case 'All Products':
 		$('#listofproduct').addClass('active');
 		break;
 	default:
+		if(menu == "Home") 
+		break;
 		$('#listofproduct').addClass('active');
 		$('#a_' + menu).addClass('active');
 		break;
