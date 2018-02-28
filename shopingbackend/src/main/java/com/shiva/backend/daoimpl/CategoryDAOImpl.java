@@ -64,7 +64,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Override
 	public boolean delete(Category category) {
 		
-		category.setActive(true);
+		category.setActive(false);
 		try {
 			sessionFactory.getCurrentSession().update(category);
 			

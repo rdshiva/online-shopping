@@ -8,7 +8,6 @@
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,10 +23,15 @@
 
 <script>
 	window.menu = '${title}';
+	
+	window.contextRoot = '${contextRoot}'
 </script>
 
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Bootstrap Datatable  JavaScript -->
+	<script src="${css}/dataTables.bootstrap.css"></script>
 
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -81,6 +85,12 @@
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="${js}/bootstrap.min.js"></script>
+		
+		<!-- datatable -->
+	<script src="${js}/jquery.dataTables.js"></script>
+	
+			<!-- datatable - style change -->
+	<script src="${js}/dataTables.bootstrap.js"></script>
 	
 	<!-- highlight/bold the text when clicked JavaScript -->
 	<script src="${js}/highlightonclick.js"></script>

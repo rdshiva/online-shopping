@@ -5,11 +5,10 @@ import com.shiva.backend.dto.Category;
 
 public interface CategoryDAO {
 
+		List<Category> list();
 		boolean add(Category ccategory);
 		boolean update(Category ccategory);
 		boolean delete(Category ccategory);
 	
-		List<Category> list();
-
 		Category get(int id);
 }

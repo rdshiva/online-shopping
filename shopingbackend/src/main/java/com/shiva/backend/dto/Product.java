@@ -3,8 +3,12 @@ package com.shiva.backend.dto;
 import java.util.UUID;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
 public class Product {
 
 	@Id
@@ -12,6 +16,7 @@ public class Product {
 	private String code;
 	private String name;
 	private String brand;
+	@JsonIgnore
 	private String description;
 	@Column(name="unit_price")
 	private double unitPrice;
@@ -21,6 +26,7 @@ public class Product {
 	@Column(name="category_id")
 	private int categoryId;
 	@Column(name="supplier_id")
+	@JsonIgnore
 	private int supplierId;
 	private int purchases;
 	private int views;

@@ -24,18 +24,18 @@ public class CategoryTestCase {
 		categoryDao = (CategoryDAO) context.getBean("categoryDao");
 	}
 	
-	@Test
+	/*@Test
 	public void testAddCategory() {
 		category = new Category();
-		category.setId(3);
-		category.setName("Laptop");
-		category.setDescription("Contains list of Laptop");
-		category.setImgURL("HP.jpg");
+		category.setId(4);
+		category.setName("Hathway");
+		category.setDescription("Contains list of Hathway");
+		category.setImgURL("Hathwayu.jpg");
 		category.setActive(true);
 		
 		assertEquals ("Success",true,categoryDao.add(category));
 
-	}
+	}*/
 	
 /*	@Test
 	public void testGetCategory() {
@@ -46,19 +46,18 @@ public class CategoryTestCase {
 		
 	}*/
 	
-	/*@Test
+	@Test
 	public void testUpdateCategory() {
 		
-		category = categoryDao.get(3);
+		category = categoryDao.get(4);
 		
-		category.setName("TV");
+		category.setImgURL("Hathway.jpg");
 		
 		assertEquals ("Success updated single category",true,categoryDao.update(category));
-		
-	}*/
+		}
 	
 	
-/*	@Test
+	/*@Test
 	public void testDeleteCategory() {
 		
 		category = categoryDao.get(2);

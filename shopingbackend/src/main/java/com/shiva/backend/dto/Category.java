@@ -2,6 +2,8 @@ package com.shiva.backend.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,7 +12,7 @@ import javax.persistence.Table;
 public class Category {
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	//@Column(name = "ID")
 	private int id;
 	//@Column (name ="Name")
