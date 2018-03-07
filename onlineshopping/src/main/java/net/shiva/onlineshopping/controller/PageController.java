@@ -1,7 +1,7 @@
 package net.shiva.onlineshopping.controller;
 
-
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +14,8 @@ import com.shiva.backend.dto.Category;
 @Controller
 public class PageController {
 	
+	
+	private static final Logger logger = LoggerFactory.getLogger(PageController.class);
 	@Autowired
 	CategoryDAO categoryDao;
 
@@ -22,6 +24,9 @@ public class PageController {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Home");
 		
+		logger.info("inside page controller index method");
+		logger.debug("inside page controller debug index method");
+				
 		mv.addObject("categories",categoryDao.list());
 		mv.addObject("userClickHome", true);
 		return mv;

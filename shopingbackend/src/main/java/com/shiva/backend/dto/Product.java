@@ -4,14 +4,15 @@ import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Product {
 
 	@Id
+	@GeneratedValue
 	private int id;
 	private String code;
 	private String name;

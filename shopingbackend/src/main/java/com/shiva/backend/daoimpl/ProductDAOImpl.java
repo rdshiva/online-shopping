@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.shiva.backend.dao.ProductDAO;
+import com.shiva.backend.dto.Category;
 import com.shiva.backend.dto.Product;
 
 @Repository("productDAO")
@@ -51,6 +52,19 @@ public class ProductDAOImpl implements ProductDAO {
 							.setFirstResult(0)
 								.setMaxResults(5)
 									.getResultList();
+	}
+
+
+	@Override
+	public boolean add(Product mProduct) {
+		try {
+			sessionFactory.getCurrentSession().persist(mProduct);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		
 	}
 
 }

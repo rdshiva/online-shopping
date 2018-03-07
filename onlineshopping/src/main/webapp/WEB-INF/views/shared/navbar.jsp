@@ -17,6 +17,7 @@
 				<li id="about"><a href="${contextRoot }/about">about</a></li>
 				<li id="contact"><a href="${contextRoot }/contact">contact</a></li>
 				<li id="listofproduct"><a href="${contextRoot }/show/all/products">Products</a></li>
+				<li id="manageProducts"><a href="${contextRoot }/manage/products">Manage Products</a></li>
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->

@@ -1,7 +1,9 @@
 package com.shiva.backend.config;
 
 import java.util.Properties;
+
 import javax.sql.DataSource;
+
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
@@ -54,6 +56,7 @@ public class HibernateConfig {
 		propeties.put("hibenate.dialect", DATABASE_DIALECT);
 		propeties.put("hibenate.show_sql", "true");
 		propeties.put("hibenate.format_sql", "true");
+		propeties.put("hibernate.id.new_generator_mappings", "false");
 		return propeties;
 	}
 	

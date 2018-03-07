@@ -15,5 +15,6 @@ public interface ProductDAO {
 	List<Product> listActiveProducts();
 	List<Product> listActiveProductsByCategory(int catergoryId);
 	List<Product> getLatestActiveProducts(int count);
+	boolean add(Product mProduct);
 	
 }
