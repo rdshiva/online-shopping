@@ -53,9 +53,9 @@ public class HibernateConfig {
 	
 	private Properties getHibernateProperties() {
 		Properties propeties = new Properties();
-		propeties.put("hibenate.dialect", DATABASE_DIALECT);
-		propeties.put("hibenate.show_sql", "true");
-		propeties.put("hibenate.format_sql", "true");
+		propeties.put("hibernate.dialect", DATABASE_DIALECT);
+		propeties.put("hibernate.show_sql", "true");
+		propeties.put("hibernate.format_sql", "true");
 		propeties.put("hibernate.id.new_generator_mappings", "false");
 		return propeties;
 	}

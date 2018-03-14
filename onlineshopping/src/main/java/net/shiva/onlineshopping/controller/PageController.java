@@ -11,6 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.shiva.backend.dao.CategoryDAO;
 import com.shiva.backend.dto.Category;
 
+import net.shiva.onlineshopping.exception.GeneralException;
+
 @Controller
 public class PageController {
 	
@@ -68,12 +70,16 @@ public class PageController {
 	 * */
 	
 	@RequestMapping(value = "/show/category/{id}/products")
-	public ModelAndView showCategoryProducts(@PathVariable ("id") int id) {
+	public ModelAndView showCategoryProducts(@PathVariable ("id") int id)  throws GeneralException{
 		ModelAndView mv = new ModelAndView("page");
 		
 		Category category = null;
 		
 		category = categoryDao.get(id);
+		
+		if(category == null) {
+			throw new GeneralException();
+		}
 		
 		mv.addObject("title", category.getName());
 		
