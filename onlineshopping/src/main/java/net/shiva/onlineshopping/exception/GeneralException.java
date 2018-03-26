@@ -17,6 +17,4 @@ public class GeneralException extends Exception {
 	public String getMeassage() {
 		return meassage;
 	}
-		
-	
 }

@@ -26,6 +26,7 @@ public class HibernateConfig {
 	
 	
 	//datasource bean will give bean info
+	
 	@Bean
 	public DataSource getDataSource() {
 		
